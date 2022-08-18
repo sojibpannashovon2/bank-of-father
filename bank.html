@@ -9,10 +9,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body background="images/pic1.webp">
     <header>
 
-        <h1 class="font-bold text-3xl text-center mt-7">Let's Get Some <span class="text-indigo-600">Mooooney
+        <h1 class="font-bold text-3xl text-center mt-7 text-orange-600">Let's Get Some <span class="text-white">Mooooney
                 !!!</span> From My
             Bank
             Of
@@ -22,23 +22,59 @@
     <main>
         <section class="m-15 text-white">
             <div class="grid grid-cols-3 gap-3 w-8/12 mx-auto mt-12 ">
-                <div class="bg-teal-400 p-12 rounded-lg">
+                <div class="bg-teal-400 p-12 rounded-lg border-slate-900 border-4">
                     <h4 class="text-3xl font-bold">Deposit</h4>
-                    <h2 class="text-3xl font-bold">$00</h2>
+                    <h2 class="text-3xl font-bold">$<span id="total-deposit">00</span></h2>
                 </div>
-                <div class="bg-pink-500 p-12 rounded-lg">
-                    <h4 class="text-3xl font-bold">Deposit</h4>
-                    <h2 class="text-3xl font-bold">$00</h2>
+                <div class="bg-pink-500 p-12 rounded-lg border-slate-900 border-4">
+                    <h4 class="text-3xl font-bold">Withdraw</h4>
+                    <h2 class="text-3xl font-bold">$<span id="withdraw-balance">00</span></h2>
                 </div>
-                <div class="bg-red-500 p-12 rounded-lg">
-                    <h4 class="text-3xl font-bold">Deposit</h4>
-                    <h2 class="text-3xl font-bold">$00</h2>
+                <div class="bg-red-500 p-12 rounded-lg border-slate-900 border-4">
+                    <h4 class="text-3xl font-bold">Balance</h4>
+                    <h2 class="text-3xl font-bold">$<span id="total-balance">1260</span> </h2>
                 </div>
 
             </div>
         </section>
-    </main>
 
+        <!-- Another Section -->
+
+        <section class="m-15 ">
+            <div class="grid grid-cols-2 gap-3 w-8/12 mx-auto mt-12 ">
+
+
+                <div class="bg-slate-500 p-12 rounded-lg border-slate-900 border-4">
+                    <h2 class="text-2xl font-bold mb-3 text-white">Please Deposit</h2>
+
+                    <div>
+                        <input class="block mb-2 w-8/12 px-3 w-10/12 rounded-md" type="text" name="" id="deposit-field"
+                            placeholder=" $ Amount you want to Deposit ">
+                        <button
+                            class="bg-red-700 px-3 py-2 rounded-md text-sm font-semibold text-white hover:bg-sky-700"
+                            id="btn-deposit">Deposit</button>
+                    </div>
+                </div>
+
+
+                <div class="bg-blue-600 p-12 rounded-lg border-slate-900 border-4">
+                    <h2 class="text-2xl font-bold mb-3 text-white">Please Withdraw</h2>
+
+                    <div>
+                        <input class="block mb-2 w-8/12 px-3 w-10/12 rounded-md" type="text" name="" id="withdraw-field"
+                            placeholder=" $ Amount you want to Withdraw ">
+                        <button
+                            class="bg-red-700 px-3 py-2 rounded-md text-sm font-semibold text-white hover:bg-sky-700"
+                            id="with-button">Withdraw</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+    <script src="javaScript/deposit.js"></script>
+    <script src="javaScript/withdraw.js"></script>
 </body>
 
 </html>
