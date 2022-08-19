@@ -12,6 +12,13 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
     const newDepositAmount = parseFloat(newDepositAmountString);
 
     depositField.value = '';
+
+    //Validation Cheak
+
+    if (isNaN(newDepositAmount)) {
+        alert("Please give an Valid Number!!!");
+        return;
+    }
     // console.log(depositValue);
 
     // set the total deposit from deposit text
